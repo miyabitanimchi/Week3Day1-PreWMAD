@@ -18,7 +18,7 @@ const addTwoNumbers = function(x, y) {
 
   console.log(x + y);
 
-};
+}
 
 
 // Function Two: should have two parameters, meaning it will take two arguments. 
@@ -28,7 +28,7 @@ const multiplyTwoNumbers = function(x, y) {
 
   console.log(x * y);
 
-};
+}
 
 
 // Function Three: should have two parameters, meaning it will take two arguments. 
@@ -38,18 +38,23 @@ const divideXByY = function(x, y) {
 
   console.log(x / y);
 
-};
+}
 
 
 // Function Four: should have two parameters, meaning it will take two arguments. 
 // The first argument will be the total amount in dollars and cents (ex. 10.25) and the second will be the percentage of tax charged (ex. 5).
 // calculate the toal price (the amount, + the percentage)
 
+
+
+
+
+
 const calculateTax = function(x, y) {
 
-  console.log(x + x/0.5*100 );
+  console.log(x * (1 + y / 100));
 
-};
+}
 
 
 // Function Five: should have 0 parameters, meaning it will take 0 arguments. 
@@ -57,11 +62,11 @@ const calculateTax = function(x, y) {
 
 const printNumbersToTen = function() {
 
-  for(i=1; i<=10; i++) {
+  for (let i = 1; i <= 10; i++) {
     console.log(i);
-}
+ }
 
-};
+}
 
 
 
@@ -70,18 +75,18 @@ const printNumbersToTen = function() {
 
 const printNumbersToX = function(x) {
 
-  for(i=1; 1<=x; i++) {
+  for (let i = 1; i <= x; i++) {
     console.log(i);
   }
 
-};
+}
 
 // Function seven: should have 2 parameters, meaning it will take 2 arguments. 
 // log to the console the two strings given, added together, with a space in between
 
-const addStrings = function() {
+const addStrings = function(num1, num2) {
 
-  //Your code goes here
+  console.log(num1 + num2);
 
 }
 
@@ -93,7 +98,19 @@ const addStrings = function() {
 
 const fizzBuzz = function() {
 
-  //Your code goes here
+  for (let i = 1; i <= 100; i++) {
+
+    if (i % 15 === 0) {
+      console.log("fizzbuzz");
+    } else if (i % 3 === 0) {
+      console.log("fizz");
+    } else if  (i % 5 === 0) {
+      console.log("buzz");
+  } else {
+    console.log(i);
+  }
+
+}
 
 }
 
@@ -102,69 +119,90 @@ const fizzBuzz = function() {
 // for every number that is a multiple of 3, print the word "fizz", and for every multiple of 5
 // print the word "buzz"
 
-const paramFizzBuzz = function() {
+const paramFizzBuzz = function(x) {
 
-  //Your code goes here
+
+  for (let i = 1; i <= x; i++) {
+    
+  if (i % 3 === 0) {
+    console.log("fizz");
+  } else if (i % 5 === 0) {
+    console.log("buzz");
+  } else {
+    console.log(i);
+  }
 
 }
+
+}
+
 
 
 
 // Function ten, Bonus: should have 1 parameter, meaning it will take 1 arguments. 
 // log to the console the reverse of the given string
 
-const reverseString= function() {
+const reverseString = (str) => {
+  　
+  let reversed = '';
 
-  //Your code goes here
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i];
+  }
 
-}
+  return reversed;
 
+};
+
+reverseString("helloworld");
+
+// reverseString("helloworld");
 
 //should = 6
-addTwoNumbers(1, 5) 
+// addTwoNumbers(1, 5) 
 
 //should = -3
-addTwoNumbers(1, -4) 
+// addTwoNumbers(1, -4) 
 
 //should = 120
-addTwoNumbers(20, 100) 
+// addTwoNumbers(20, 100) 
 
 
 
 // should = 10
-multiplyTwoNumbers(2, 5)
+// multiplyTwoNumbers(2, 5)
 // 
 
 
 // should = 100
-multiplyTwoNumbers(20, 5)
+// multiplyTwoNumbers(20, 5)
 // 
 
 
 // should = 4
-divideXByY(20, 5)
+// divideXByY(20, 5)
 
 
 // should = 6
-divideXByY(36, 6)
+// divideXByY(36, 6)
 
 
 // should = 11
-calculateTax(10, 10)
+// calculateTax(10, 10)
 
 // should = 120
-calculateTax(100, 20)
+// calculateTax(100, 20)
 
- printNumbersToTen()
+//  printNumbersToTen()
 
-printNumbersToX(5)
+// printNumbersToX(5)
 
 // printNumbersToX(45)
 
 // printNumbersToX(10)
 
 // should print = 'hello world'
-// addStrings("hello", "world")
+// addStrings("hello ", "world");
 
 // fizzBuzz()
 

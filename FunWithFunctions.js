@@ -52,7 +52,7 @@ const divideXByY = function(x, y) {
 
 const calculateTax = function(x, y) {
 
-  console.log(x * (1 + y / 100));
+  console.log(x + (x * y / 100));
 
 }
 
@@ -62,7 +62,7 @@ const calculateTax = function(x, y) {
 
 const printNumbersToTen = function() {
 
-  for (let i = 1; i <= 10; i++) {
+  for (i = 1; i <= 10; i++) {
     console.log(i);
  }
 
@@ -75,7 +75,7 @@ const printNumbersToTen = function() {
 
 const printNumbersToX = function(x) {
 
-  for (let i = 1; i <= x; i++) {
+  for (i = 1; i <= x; i++) {
     console.log(i);
   }
 
@@ -84,9 +84,9 @@ const printNumbersToX = function(x) {
 // Function seven: should have 2 parameters, meaning it will take 2 arguments. 
 // log to the console the two strings given, added together, with a space in between
 
-const addStrings = function(num1, num2) {
+const addStrings = function(word1, word2) {
 
-  console.log(num1 + num2);
+  console.log(word1 + word2);
 
 }
 
@@ -98,7 +98,7 @@ const addStrings = function(num1, num2) {
 
 const fizzBuzz = function() {
 
-  for (let i = 1; i <= 100; i++) {
+  for (i = 1; i <= 100; i++) {
 
     if (i % 15 === 0) {
       console.log("fizzbuzz");
@@ -106,7 +106,7 @@ const fizzBuzz = function() {
       console.log("fizz");
     } else if  (i % 5 === 0) {
       console.log("buzz");
-  } else {
+    } else {
     console.log(i);
   }
 
@@ -120,20 +120,14 @@ const fizzBuzz = function() {
 // print the word "buzz"
 
 const paramFizzBuzz = function(x) {
-
-
-  for (let i = 1; i <= x; i++) {
-    
-  if (i % 3 === 0) {
-    console.log("fizz");
-  } else if (i % 5 === 0) {
-    console.log("buzz");
-  } else {
-    console.log(i);
-  }
-
-}
-
+  for (i = 1; i <= x; i++)
+    if (i % 3 === 0) {
+      console.log("fizz");
+    } else if (i % 5 === 0) {
+      console.log("buzz");
+    } else {
+      console.log(i);
+    }
 }
 
 
@@ -142,21 +136,15 @@ const paramFizzBuzz = function(x) {
 // Function ten, Bonus: should have 1 parameter, meaning it will take 1 arguments. 
 // log to the console the reverse of the given string
 
-const reverseString = (str) => {
+const reverseString = function(str) {
   　
-  let reversed = '';
-
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
+    const reversed = str.split('').reverse().join('');
+    console.log(reversed)
   }
 
-  return reversed;
-
-};
-
-reverseString("helloworld");
 
 // reverseString("helloworld");
+
 
 //should = 6
 // addTwoNumbers(1, 5) 
